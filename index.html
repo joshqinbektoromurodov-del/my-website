@@ -1,10 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="uz">
 <head>
-    <title>Mening birinchi saytim</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Shop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Salom Dunyo 🌍</h1>
-    <p>Bu mening GitHub orqali chiqqan birinchi saytim.</p>
+
+<header>
+  <div class="logo">PremiumShop</div>
+  <nav>
+    <a href="#">Bosh sahifa</a>
+    <a href="#products">Mahsulotlar</a>
+    <a href="#">Aloqa</a>
+  </nav>
+  <div class="cart-icon" onclick="openCart()">
+    🛍️ <span id="cart-count">0</span>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Yangi Kolleksiya 2026</h1>
+  <p>Eng sifatli mahsulotlar eng yaxshi narxda</p>
+  <button onclick="scrollToProducts()">Xarid qilish</button>
+</section>
+
+<section class="categories">
+  <h2>Kategoriyalar</h2>
+  <div class="cat-grid">
+    <div class="cat-card">👕 Kiyim</div>
+    <div class="cat-card">👟 Oyoq kiyim</div>
+    <div class="cat-card">⌚ Aksessuar</div>
+    <div class="cat-card">📱 Elektronika</div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <h2>Mahsulotlar</h2>
+  <div class="product-grid">
+
+    <div class="card">
+      <h3>Sport Krossovka</h3>
+      <p>$50</p>
+      <button onclick="addToCart('Sport Krossovka',50)">Savatga qo‘shish</button>
+    </div>
+
+    <div class="card">
+      <h3>Smart Soat</h3>
+      <p>$120</p>
+      <button onclick="addToCart('Smart Soat',120)">Savatga qo‘shish</button>
+    </div>
+
+    <div class="card">
+      <h3>Naushnik</h3>
+      <p>$35</p>
+      <button onclick="addToCart('Naushnik',35)">Savatga qo‘shish</button>
+    </div>
+
+    <div class="card">
+      <h3>Futbolka</h3>
+      <p>$25</p>
+      <button onclick="addToCart('Futbolka',25)">Savatga qo‘shish</button>
+    </div>
+
+    <div class="card">
+      <h3>Ryukzak</h3>
+      <p>$60</p>
+      <button onclick="addToCart('Ryukzak',60)">Savatga qo‘shish</button>
+    </div>
+
+    <div class="card">
+      <h3>Ko'zoynak</h3>
+      <p>$40</p>
+      <button onclick="addToCart('Kozoynak',40)">Savatga qo‘shish</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- CART MODAL -->
+<div class="cart-modal" id="cartModal">
+  <div class="cart-content">
+    <h2>Savat</h2>
+    <ul id="cart-items"></ul>
+    <h3>Umumiy: $<span id="total">0</span></h3>
+    <button onclick="closeCart()">Yopish</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
